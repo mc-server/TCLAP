@@ -137,7 +137,7 @@ class CmdLine : public CmdLineInterface
 		/**
 		 * Throws an exception listing the missing args.
 		 */
-		void missingArgsException();
+		[[ noreturn ]] void missingArgsException();
 
 		/**
 		 * Checks whether a name/flag string matches entirely matches
@@ -533,7 +533,7 @@ inline bool CmdLine::_emptyCombined(const std::string& s)
 	return true;
 }
 
-inline void CmdLine::missingArgsException()
+[[ noreturn ]] inline void CmdLine::missingArgsException()
 {
 		int count = 0;
 

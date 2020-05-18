@@ -38,7 +38,6 @@ namespace TCLAP {
  */
 struct ValueLike {
     typedef ValueLike ValueCategory;
-	virtual ~ValueLike() {}
 };
 
 /**
